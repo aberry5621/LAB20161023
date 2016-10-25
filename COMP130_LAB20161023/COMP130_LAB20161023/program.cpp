@@ -18,7 +18,6 @@ int main() {
 	cout << "Enter a 4-by-4 matrix, row by row:" << endl;
 
 	const int SIZE = 4;
-	const int SIZE = 4;
 	double matrix[SIZE][SIZE];
 
 	for (int row = 0; row < SIZE; row++) {
@@ -28,7 +27,9 @@ int main() {
 		}
 	}
 
-	cout << "Sum of major diagonal is: " << sum_major_diagonal(matrix);
+	double return_value = sum_major_diagonal(matrix);
+
+	cout << "Sum of major diagonal is: " << return_value << endl;
 
 	return 0;
 }
@@ -39,13 +40,10 @@ double sum_major_diagonal(const double matrix[][SIZE]) {
 
 	for (int i = 0; i < SIZE; i++)
 	{
-		for (int j = 0; j < SIZE; j++) {
-			diagonal_sum += matrix[i][i];
-		}
+		diagonal_sum += matrix[i][i];
 	}
 
 	return diagonal_sum;
-
 
 }
 
