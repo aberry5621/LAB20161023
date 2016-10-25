@@ -3,10 +3,62 @@
 // date: octo 24 2016
 // something about binary search
 
-#define prog 2
+#define prog 3
 
-#if prog == 2
+#if prog == 3
 
+#include <iostream>
+using namespace std;
+
+const int SIZE = 4;
+double sum_major_diagonal(const double m[][SIZE]);
+
+int main() {
+
+	cout << "Enter a 4-by-4 matrix, row by row:" << endl;
+
+	const int SIZE = 4;
+	const int SIZE = 4;
+	double matrix[SIZE][SIZE];
+
+	for (int row = 0; row < SIZE; row++) {
+		for (int col = 0; col < SIZE; col++) {
+			cin >> matrix[row][col];
+			cout << "Initializing matrix cell [" << row << "][" << col << "] with " << matrix[row][col] << endl;
+		}
+	}
+
+	cout << "Sum of major diagonal is: " << sum_major_diagonal(matrix);
+
+	return 0;
+}
+
+double sum_major_diagonal(const double matrix[][SIZE]) {
+
+	double diagonal_sum = 0;
+
+	for (int i = 0; i < SIZE; i++)
+	{
+		for (int j = 0; j < SIZE; j++) {
+			diagonal_sum += matrix[i][i];
+		}
+	}
+
+	return diagonal_sum;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+#elif prog == 2
 #include <iostream>
 #include <ctime>
 using namespace std;
